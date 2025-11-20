@@ -1,0 +1,62 @@
+.font-heading {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.font-body {
+  font-family: "Inter", sans-serif;
+}
+
+
+.text-shadow-soft {
+  text-shadow: 0 1px 4px rgba(99, 102, 241, 0.45);
+}
+
+.text-shadow-medium {
+  text-shadow: 0 0 3px rgba(99, 102, 241, 0.6),
+               0 0 10px rgba(99, 102, 241, 0.45);
+}
+
+
+
+@layer utilities {
+  /* Moving gradient background animation */
+  @keyframes gradientMove {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .bg-gradient-animate {
+    background: linear-gradient(-45deg, #020410, #0A0F24, #261E59, #4B1E91);
+
+    background-size: 300% 300%;
+    animation: gradientMove 8s ease infinite;
+  }
+}
+.text-shadow-2xs {
+  text-shadow: 1px 1px 2px indigo(114, 43, 43, 0.7);
+}
+
+
+.fade-in {
+      opacity: 0;
+      transform: translateY(15px);
+      transition: opacity 0.8s ease, transform 0.9s ease;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .typing {
+      border-right: 3px solid purple;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: blink 0.7s infinite;
+    }
+    @keyframes blink {
+      0%, 50% { border-color: transparent; }
+      51%, 100% { border-color: indigo; }
+    }
