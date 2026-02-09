@@ -16,6 +16,11 @@
                0 0 10px rgba(99, 102, 241, 0.45);
 }
 
+.box-shadow-medium {
+ box-shadow: 0 0 3px rgba(99, 102, 241, 0.6),
+               0 0 10px rgba(99, 102, 241, 0.45);            
+}
+
 
 
 @layer utilities {
@@ -30,7 +35,7 @@
   }
 
   .bg-gradient-animate {
-    background: linear-gradient(-45deg, #020410, #0A0F24, #261E59, #4B1E91);
+    background: linear-gradient(-45deg,darkslateblue, black, black, slateblue);
 
     background-size: 300% 300%;
     animation: gradientMove 8s ease infinite;

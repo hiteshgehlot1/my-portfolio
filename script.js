@@ -13,7 +13,7 @@ function typeText(elementId, text, speed = 90) {
 
 // Start typing animation
 typeText("typingName", "HITESH GEHLOT");
-setTimeout(() => typeText("typingSub", "Frontend Developer & App Builder"), 1200);
+setTimeout(() => typeText("typingSub", "Web Developer & Cloud Enthusiast"), 1200);
 
 // Dynamic project cards
 const projects = [
@@ -29,29 +29,77 @@ const certs = [
   { title: "Developing Soft Skills", org: "NPTEL", }
 ];
 
+const skill = [
+  { Name: "Javascript"},
+  { Name: "HTML"},
+  { Name: "CSS"},
+  { Name: "Tailwind CSS"},
+  { Name: "C++"},
+  { Name: "Introduction to Cloud"},
+];
+
 // Render Projects
 projects.forEach(p => {
   document.getElementById("projectsGrid").innerHTML += `
-    <div class="p-4 bg-gray-800 rounded-xl fade-in hover:-translate-y-1 transition">
+    <div class="p-4 bg-gray-900 rounded-xl fade-in hover:-translate-y-1 transition box-shadow-medium">
       <h3 class="font-semibold text-lg">${p.title}</h3>
       <p class="text-gray-400 text-sm">${p.tech}</p>
-      <a href="${p.link}" target="_blank" class="text-teal-400 text-sm mt-2 inline-block">Open →</a>
+      <a href="${p.link}" target="_blank" class="text-yellow-900  text-sm mt-2 inline-block">Open →</a>
     </div>
   `;
 });
 
 // Render Certifications
+// Render Certifications
+const certsGrid = document.getElementById("certsGrid");
+
 certs.forEach(c => {
-  document.getElementById("certsGrid").innerHTML += `
-    <div class="p-4 bg-gray-800 rounded-xl fade-in">
-      <img src="cert.png" alt="Certificate" class="w-full h-24 object-contain mb-3"/>${c.img}
-      <h3 class="font-semibold text-lg ">${c.title}</h3>
-      <p class="text-gray-400 text-sm">${c.org}</p>
-      
+  certsGrid.innerHTML += `
+    <div class="
+      p-4
+      bg-gray-900
+      rounded-xl
+      fade-in
+      box-shadow-medium
+      hover:-translate-y-1
+      transition
+      text-center
+      w-full
+      max-w-sm
+      mx-auto
+    ">
+      <img src="${c.img}"
+        class="w-full h-20 sm:h-24 object-contain mb-3"/>
+
+      <h3 class="font-semibold text-base sm:text-lg">
+        ${c.title}
+      </h3>
+
+      <p class="text-gray-400 text-sm">
+        ${c.org}
+      </p>
     </div>
   `;
 });
+
 // <span class="text-xs text-teal-400">${c.year}</span>
+
+
+skill.forEach(c => {
+  document.getElementById("skillGrid").innerHTML += `
+
+     <div class="fade-in hover:-translate-y-1 transition w-fit m-auto">
+     <h3 class=" bg-indigo-900 text-white font-semibold text-lg px-3 py-1 rounded shadow fade-in hover:-translate-y-1 transition">
+      ${c.Name}
+    </h3>
+
+     </div>
+
+      
+      
+   
+  `;
+});
 
 // Footer Year
 document.getElementById("year").innerText = new Date().getFullYear();
