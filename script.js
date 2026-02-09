@@ -13,7 +13,7 @@ function typeText(elementId, text, speed = 90) {
 
 // Start typing animation
 typeText("typingName", "HITESH GEHLOT");
-setTimeout(() => typeText("typingSub", "Web Developer & Cloud Enthusiast"), 1200);
+setTimeout(() => typeText("typingSub", "Aspiring DevOps Engineer & Technology Enthusiast"), 1200);
 
 // Dynamic project cards
 const projects = [
@@ -23,19 +23,30 @@ const projects = [
 ];
 
 const certs = [
-  { title: "Oracle Cloud Foundation", org: "Oracle", img: "./assets/Hitesh1.PNG" },
-  { title: "Introduction to Cloud", org: "IBM"},
+  { title: "Oracle Cloud Foundation", org: "Oracle", img: "./assets/oracle.png" },
+  { title: "Associate Cloud Engineer SkillLabs", org: "Google CLoud", img: "./assets/gcp.jpeg" },
+  { title: "AWS Academy", org: "NPTEL", img: "./assets/aws-hitesh.png" },
+  { title: "Introduction to Cloud", org: "IBM", img: "./assets/ibm.png" },
   { title: "Foundation of Cloud IoT & Edge ML", org: "NPTEL"},
   { title: "Developing Soft Skills", org: "NPTEL", }
 ];
 
 const skill = [
+  { Name: "C++"},
   { Name: "Javascript"},
   { Name: "HTML"},
   { Name: "CSS"},
+  { Name: "React"},
+  { Name: "NodeJS"},
+  { Name: "npm"},
   { Name: "Tailwind CSS"},
-  { Name: "C++"},
-  { Name: "Introduction to Cloud"},
+  { Name: "Cloud"},
+  { Name: "AWS"},
+  { Name: "Docker"},
+  { Name: "GCP"},
+  { Name: "Github"},
+  { Name: "MongoDB"},
+  
 ];
 
 // Render Projects
@@ -49,15 +60,16 @@ projects.forEach(p => {
   `;
 });
 
-// Render Certifications
+
 // Render Certifications
 const certsGrid = document.getElementById("certsGrid");
 
 certs.forEach(c => {
   certsGrid.innerHTML += `
     <div class="
+     
       p-4
-      bg-gray-900
+      bg-black    
       rounded-xl
       fade-in
       box-shadow-medium
@@ -66,10 +78,10 @@ certs.forEach(c => {
       text-center
       w-full
       max-w-sm
-      mx-auto
+      mx-auto 
     ">
       <img src="${c.img}"
-        class="w-full h-20 sm:h-24 object-contain mb-3"/>
+        class="w-full h-40 sm:h-34 rounded-xl object-contain mb-3"/>
 
       <h3 class="font-semibold text-base sm:text-lg">
         ${c.title}
@@ -87,17 +99,11 @@ certs.forEach(c => {
 
 skill.forEach(c => {
   document.getElementById("skillGrid").innerHTML += `
-
-     <div class="fade-in hover:-translate-y-1 transition w-fit m-auto">
-     <h3 class=" bg-indigo-900 text-white font-semibold text-lg px-3 py-1 rounded shadow fade-in hover:-translate-y-1 transition">
-      ${c.Name}
-    </h3>
-
-     </div>
-
-      
-      
-   
+      <div class="fade-in hover:-translate-y-1 transition w-fit m-3">
+        <h3 class=" bg-indigo-900 text-white font-semibold text-lg px-3 py-1 rounded shadow fade-in hover:-translate-y-1 transition">
+          ${c.Name}
+        </h3>
+     </div>   
   `;
 });
 
