@@ -23,26 +23,19 @@
 
 
 
-@layer utilities {
-  /* Moving gradient background animation */
-  @keyframes gradientMove {
-    0%, 100% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-  }
-
-  .bg-gradient-animate {
-    background: linear-gradient(-45deg,darkslateblue, black, black, slateblue);
-
-    background-size: 300% 300%;
-    animation: gradientMove 8s ease infinite;
-  }
+@keyframes gradientMove {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
+
+.bg-gradient-animate {
+  background: linear-gradient(-45deg,darkslateblue, black, black, slateblue);
+  background-size: 300% 300%;
+  animation: gradientMove 8s ease infinite;
+}
+
 .text-shadow-2xs {
-  text-shadow: 1px 1px 2px indigo(114, 43, 43, 0.7);
+  text-shadow: 1px 1px 2px rgba(114, 43, 43, 0.7);
 }
 
 
