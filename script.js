@@ -15,11 +15,50 @@ function typeText(elementId, text, speed = 90) {
 typeText("typingName", "HITESH GEHLOT");
 setTimeout(() => typeText("typingSub", "Aspiring DevOps Engineer & Technology Enthusiast"), 1200);
 
-// Dynamic project cards
+//Dynamic Projets
 const projects = [
-  { title: "WeatherApp", tech: "HTML, JS", link: "#" },
-  { title: "Notes Lite", tech: "Tailwind, JS", link: "#" },
-  { title: "QR Maker", tech: "API, JS", link: "#" }
+  { 
+    title: "Container Launchpad", 
+    tech: "Dockerode, Docker, React, Express, axios, Tailwind", 
+    description: "Container Launchpad is a web application that simplifies Docker container management. Through an intuitive interface, users can control container lifecycles, monitor status in real time, and access logs without using the command line.",
+    link: "#" 
+  },
+
+  { 
+    title: "SecureScope", 
+    tech: "React, Tailwind, API, OWASP", 
+    description: "A lightweight security analysis tool. SecureScope is a security scanning tool that takes a website URL and evaluates it against OWASP inspired vulnerability standards. It generates security details, highlights potential risks, and provides an overall risk status to assist in effective security management.",
+    link: "#" 
+  },
+
+  { 
+    title: "Cloud Cost Calculator", 
+    tech: "React, Tailwind, API", 
+    description: "Estimate and compare cloud infrastructure costs in real time to avoid surprise billing storms.",
+    link: "#" 
+  },
+
+  { 
+    title: "QR Maker", 
+    tech: "API, JS", 
+    description: "Generate QR codes instantly for URLs or text using a simple API integration.",
+    link: "#" 
+  },
+  
+  { 
+    title: "WeatherApp", 
+    tech: "HTML, JS", 
+    description: "Fetches live weather data and displays clean, minimal forecasts for any city.",
+    link: "#" 
+  },
+
+  { 
+    title: "Notes Lite", 
+    tech: "Tailwind, JS", 
+    description: "A distraction free note taking app with local storage support.",
+    link: "#" 
+  },
+  
 ];
 
 const certs = [
@@ -52,10 +91,16 @@ const skill = [
 // Render Projects
 projects.forEach(p => {
   document.getElementById("projectsGrid").innerHTML += `
-    <div class="p-4 bg-gray-900 rounded-xl fade-in hover:-translate-y-1 transition box-shadow-medium">
-      <h3 class="font-semibold text-lg">${p.title}</h3>
-      <p class="text-gray-400 text-sm">${p.tech}</p>
-      <a href="${p.link}" target="_blank" class="text-yellow-900  text-sm mt-2 inline-block">Open →</a>
+    <div class="p-8 bg-gray-900 rounded-xl fade-in hover:-translate-y-1 transition box-shadow-medium">
+      <h3 class="font-semibold text-lg mb-1">${p.title}</h3>
+      <p class="text-gray-400 text-sm mb-2">${p.tech}</p>
+      <p class="text-gray-300 text-sm mb-3 leading-relaxed">
+        ${p.description}
+      </p>
+      <a href="${p.link}" target="_blank" 
+         class="text-yellow-500 hover:text-yellow-400 text-sm inline-block">
+         Open →
+      </a>
     </div>
   `;
 });
@@ -68,8 +113,8 @@ certs.forEach(c => {
   certsGrid.innerHTML += `
     <div class="
      
-      p-4
-      bg-black    
+      p-5
+      bg-gray-900    
       rounded-xl
       fade-in
       box-shadow-medium
@@ -94,7 +139,6 @@ certs.forEach(c => {
   `;
 });
 
-// <span class="text-xs text-teal-400">${c.year}</span>
 
 
 skill.forEach(c => {
