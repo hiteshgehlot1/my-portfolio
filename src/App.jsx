@@ -40,7 +40,7 @@ function App() {
           color: 'var(--text-muted)',
         }}
       >
-        © {new Date().getFullYear()} Hitesh Gehlot. Minimalist Portfolio.
+        © {new Date().getFullYear()} Hitesh Gehlot 🖤
       </footer>
     </>
   );
