@@ -15,7 +15,7 @@ export default function Contact() {
           Let's Connect.
         </h2>
         <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', marginBottom: '3rem' }}>
-          Available for freelance & collaborations
+          Available to Work & Collaboration.
         </p>
 
         <a

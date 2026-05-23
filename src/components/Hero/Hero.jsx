@@ -14,71 +14,121 @@ export default function Hero() {
         borderBottom: '1px solid var(--border)',
       }}
     >
-      <div className="section-wrapper">
-        <motion.span
-          style={{
-            display: 'block',
-            fontFamily: '"DM Mono", monospace',
-            color: 'var(--text-muted)',
-            fontSize: 'clamp(0.85rem, 2vw, 1.15rem)',
-            letterSpacing: '0.12em',
-            textTransform: 'uppercase',
-            marginBottom: '1.5rem',
-          }}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          Software Developer • Cloud Enthusiast
-        </motion.span>
+      <div
+        className="section-wrapper flex gap-12"
+        style={{
+          alignItems: "center",
+          justifyContent: "space-between",
+          flexWrap: "wrap",
+        }}
+      >
+        <div>
+          <motion.span
+            style={{
+              display: 'block',
+              fontFamily: '"DM Mono", monospace',
+              color: 'var(--text-muted)',
+              fontSize: 'clamp(0.85rem, 2vw, 1.15rem)',
+              letterSpacing: '0.12em',
+              textTransform: 'uppercase',
+              marginBottom: '1.5rem',
+            }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            Software Developer • DevOps Enthusiast
+          </motion.span>
 
-        <motion.h1
-          style={{
-            fontFamily: '"Playfair Display", serif',
-            fontSize: 'clamp(2.8rem, 7vw, 6.5rem)',
-            lineHeight: 1.05,
-            letterSpacing: '-0.02em',
-            fontWeight: 500,
-            marginBottom: '2rem',
-            maxWidth: '900px',
-          }}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
-        >
-          I'm Hitesh Gehlot,
-        </motion.h1>
+          <motion.h1
+            style={{
+              fontFamily: '"Playfair Display", serif',
+              fontSize: 'clamp(2.8rem, 7vw, 6.5rem)',
+              lineHeight: 1.05,
+              letterSpacing: '-0.02em',
+              fontWeight: 500,
+              marginBottom: '2rem',
+              maxWidth: '900px',
+            }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
+          >
+            I'm Hitesh Gehlot,
+          </motion.h1>
 
-        <motion.p
-          style={{
-            color: 'var(--text-muted)',
-            fontSize: 'clamp(1rem, 2vw, 1.25rem)',
-            maxWidth: '680px',
-            lineHeight: 1.7,
-            marginBottom: '3rem',
-          }}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          A Computer Science undergraduate focused on software
-          development, cloud infrastructure, and building scalable backends with
-          premium frontends.
-        </motion.p>
+          <motion.p
+            style={{
+              color: 'var(--text-muted)',
+              fontSize: 'clamp(1rem, 2vw, 1.25rem)',
+              maxWidth: '680px',
+              lineHeight: 1.7,
+              marginBottom: '3rem',
+            }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+          >
+            CS undergraduate building scalable apps, 
+            and modern web experiences. AWS Certified Cloud Practitioner 
+            (CLF-C02) with interests spanning AI/ML, DevOps, and full stack
+            development. Fast learner. Highly adaptable. Always building.
+          </motion.p>
 
-        <motion.div
-          style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-        >
-          <a href="#work" className="btn-primary">
-            Project ↓
-          </a>
-          <a href="#contact" className="btn-outline">
-            Contact ↓
-          </a>
-        </motion.div>
+          <motion.div
+            style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+          >
+            <a href="#work" className="btn-primary">
+              Project ↓
+            </a>
+            <a href="#contact" className="btn-outline">
+              Contact ↓
+            </a>
+          </motion.div>
+        </div>
+        <div>
+          <motion.div
+            style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+          >
+            <div
+              style={{
+                width: "clamp(220px, 30vw, 400px)",
+                aspectRatio: "1 / 1",
+                borderRadius: "50%",
+                overflow: "hidden",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                flexShrink: 0,
+              }}
+            >
+              <img
+                src="./assets/hitt.jpg"
+                alt=""
+                
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  transition: "transform 0.3s ease",
+                  filter: 'grayscale(100%)',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "scale(1.4)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "scale(1)";
+                }}
+              />
+            </div>
+          </motion.div>
+        </div>
       </div>
 
       <style>{`
@@ -118,6 +168,13 @@ export default function Hero() {
         .btn-outline:hover {
           border-color: var(--border-hover);
           transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+          #hero .section-wrapper {
+            justify-content: center !important;
+            
+          }
         }
       `}</style>
     </section>

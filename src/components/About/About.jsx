@@ -37,8 +37,8 @@ export default function About() {
             </p>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
               {[
-                'Continuous learner (Oracle, Google, AWS certs)',
-                'CS core fundamentals, Data Structure &  algorithms',
+                'Continuous learner ',
+                'Highly Adaptable, Quick Learner, Self-Motivated',
               ].map((item, i) => (
                 <li key={i} style={{ fontFamily: '"DM Mono", monospace', fontSize: '0.85rem', display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
                   <span style={{ color: 'var(--text-muted)' }}>→</span>

@@ -2,9 +2,10 @@ import { motion } from 'framer-motion';
 import CertificationCard from './CertificationCard';
 
 const certs = [
+  { title: 'AWS Certified Cloud Practitioner', org: 'Amazon Web Services', img: './assets/aws-ccp.png' },
   { title: 'Oracle Cloud Foundation', org: 'Oracle', img: '/assets/oracle.png' },
   { title: 'Associate Cloud Engineer SkillLabs', org: 'Google Cloud', img: '/assets/gcp.jpeg' },
-  { title: 'AWS Academy', org: 'NPTEL', img: '/assets/aws-hitesh.png' },
+  { title: 'AWS Academy', org: 'AWS', img: '/assets/aws-hitesh.png' },
   { title: 'Introduction to Cloud', org: 'IBM', img: '/assets/ibm.png' },
   { title: 'Foundation of Cloud IoT & Edge ML', org: 'NPTEL', img: null },
   { title: 'Developing Soft Skills', org: 'NPTEL', img: null },

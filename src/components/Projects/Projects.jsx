@@ -11,7 +11,7 @@ const projects = [
     fullDesc: 'Container Launchpad provides an intuitive web interface for developers to control their Docker container lifecycles without opening a terminal.',
     problem: 'Command-line container management can be cumbersome for quick administrative tasks.',
     link: '#',
-    github: '#',
+    github: 'https://github.com/hiteshgehlot1/container-launchpad',
   },
   {
     id: 2,
@@ -20,8 +20,8 @@ const projects = [
     shortDesc: 'A lightweight security scanning tool evaluating against OWASP standards.',
     fullDesc: 'SecureScope takes an input URL, evaluates it against basic OWASP vulnerabilities, and generates an actionable security report.',
     problem: 'Small projects often lack basic automated security checks before production.',
-    link: '#',
-    github: '#',
+    link: 'https://secure-scope-one.vercel.app/',
+    github: 'https://github.com/hiteshgehlot1/SecureScope',
   },
   {
     id: 3,
@@ -35,13 +35,13 @@ const projects = [
   },
   {
     id: 4,
-    title: 'QR Maker',
+    title: 'Path-Visualizer',
     tech: ['API', 'JavaScript'],
-    shortDesc: 'Instant QR code generation for URLs or text.',
-    fullDesc: 'A focused, lightning-fast utility to generate QR codes using reliable third-party endpoints.',
-    problem: 'Many QR generator tools are bloated with ads or require subscriptions.',
+    shortDesc: 'Algorithm Based path finding.',
+    fullDesc: 'Using algorithms BFS, Greedy a Path identify from source to destination, with Totally user interactive from implementing source, destination to Wall Blocks',
+    problem: 'Visual Representation of Working of Algorithm Interactively.',
     link: '#',
-    github: '#',
+    github: 'https://github.com/hiteshgehlot1/path-v-app',
   },
 ];
 
