@@ -17,9 +17,7 @@ export default function Hero() {
       <div
         className="section-wrapper flex gap-12"
         style={{
-          alignItems: "center",
           justifyContent: "space-between",
-          flexWrap: "wrap",
         }}
       >
         <div>
@@ -170,10 +168,18 @@ export default function Hero() {
           transform: translateY(-2px);
         }
 
-        @media (max-width: 768px) {
+       @media (max-width: 768px) {
           #hero .section-wrapper {
-            justify-content: center !important;
-            
+            flex-direction: column !important;
+            align-items: center;
+            text-align: center;
+            gap: 3rem;
+          }
+          
+          #hero .section-wrapper div:first-child {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
           }
         }
       `}</style>
