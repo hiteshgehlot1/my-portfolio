@@ -107,22 +107,9 @@ export default function Hero() {
               }}
             >
               <img
-                src="./assets/hitt.jpg"
+                src="./assets/Hitesh-mg.jpeg"
                 alt=""
-                
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  transition: "transform 0.3s ease",
-                  filter: 'grayscale(100%)',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = "scale(1.4)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = "scale(1)";
-                }}
+                className="profile-img"
               />
             </div>
           </motion.div>
@@ -181,6 +168,17 @@ export default function Hero() {
             flex-direction: column;
             align-items: center;
           }
+        }
+        .profile-img {
+          width: 80%;
+          height: 100%;
+          object-fit: cover;
+          filter: grayscale(100%);
+          transition: filter 0.3s ease;
+        }
+
+        .profile-img:hover {
+          filter: grayscale(0%);
         }
       `}</style>
     </section>
